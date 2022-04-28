@@ -1,9 +1,9 @@
 window.onload = () => {
+  header.init()
   owlCarousel.init()
   productsPreviewColors.init()
   // countUpConfig.init()
   // lazyLoading.init()
-  // header.init()
 }
 
 const loading = {
@@ -210,13 +210,75 @@ const productsPreviewColors = {
 
 const header = {
   init: function () {
-    // this.scrollHeaderEffect()
+    this.scrollTop()
+    this.menuEffect()
+    this.menuMobile()
   },
-  scrollHeaderEffect: function () {
-    const header = document.querySelector('.header-layout')
+  menuMobile: function() {
+    const btnMenu = document.querySelector('.Navigation-btn-menu')
+    const mainMenu = document.querySelector('.Navigation-wrapper')
+    const overlay = document.querySelector('.Navigation-wrapper-overlay')
+
+    btnMenu.addEventListener('click', () => {
+      mainMenu.classList.add('active')
+    })
+
+    overlay.addEventListener('click', () => {
+      mainMenu.classList.remove('active')
+    })
+  },
+  menuEffect: function() {
+    window.addEventListener('resize', (e) => {
+      const isMobile = e.target.outerWidth <= 991
+
+      if (isMobile) {
+        addEffectMobile()
+      } else {
+        addEffectDesktop()
+      }
+    })
+
+    const addEffectDesktop = () => {
+      const menuItems = document.querySelectorAll('.Navigation-menu-item')
+
+      menuItems.forEach((item) => item.addEventListener('mousemove', () => {
+        const subMenu = item.querySelector('.Navigation-menu-item-submenu')
+        subMenu?.classList?.add('active')
+      }))
+
+      menuItems.forEach((item) => item.addEventListener('mouseout', () => {
+        const subMenu = item.querySelector('.Navigation-menu-item-submenu')
+        subMenu?.classList?.remove('active')
+      }))
+    }
+
+    const addEffectMobile = () => {
+      const menuItems = document.querySelectorAll('.Navigation-menu-item')
+
+      menuItems.forEach((item) => item.addEventListener('click', (e) => {
+        const subMenu = item.querySelector('.Navigation-menu-item-submenu')
+
+        if (subMenu) {
+          e.preventDefault()
+          subMenu?.classList?.add('active')
+        } else {
+          const link = item.querySelector('.Navigation-menu-item-link').href
+          window.location.href = link
+        }
+      }))
+    }
+
+    if (window.innerWidth <= 991) {
+      addEffectMobile()
+    } else {
+      addEffectDesktop()
+    }
+  },
+  scrollTop: function () {
+    const scroll = document.querySelector('.Scroll')
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 150) header.classList.add('active')
-      else header.classList.remove('active')
+      if (window.scrollY > 150) scroll?.classList?.add('active')
+      else scroll?.classList?.remove('active')
     })
   },
 }
