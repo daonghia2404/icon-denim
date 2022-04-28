@@ -1,43 +1,41 @@
 window.onload = () => {
-  header.init()
-  owlCarousel.init()
-  productsPreviewColors.init()
+  header.init();
+  owlCarousel.init();
+  productsPreviewColors.init();
   // countUpConfig.init()
   // lazyLoading.init()
-}
+};
 
 const loading = {
   init: function () {
-    this.configLoading()
+    this.configLoading();
   },
-  configLoading: function () {
-    
-  }
-}
+  configLoading: function () {},
+};
 
 const lazyLoading = {
   init: function () {
-    this.config()
+    this.config();
   },
   config: function () {
     const lazyLoadInstance = new LazyLoad({});
-  }
-}
+  },
+};
 
 const owlCarousel = {
   init: function () {
-    this.setupTopBarCarousel()
-    this.setupHomeBannerCarousel()
-    this.setupGalleryCarousel()
-    this.setupNewsCarousel()
-    this.setupProductsCarousel()
+    this.setupTopBarCarousel();
+    this.setupHomeBannerCarousel();
+    this.setupGalleryCarousel();
+    this.setupNewsCarousel();
+    this.setupProductsCarousel();
   },
   setupTopBarCarousel: function () {
     const $owl = $("#top-bar-carousel").owlCarousel({
       responsive: {
         0: {
           items: 1,
-          slideBy: 1
+          slideBy: 1,
         },
       },
       loop: true,
@@ -56,7 +54,7 @@ const owlCarousel = {
       responsive: {
         0: {
           items: 1,
-          slideBy: 1
+          slideBy: 1,
         },
       },
       loop: true,
@@ -67,7 +65,10 @@ const owlCarousel = {
       lazyLoad: true,
       dots: false,
       nav: true,
-      navText: ['<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="15 6 9 12 15 18" /></svg>', '<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="9 6 15 12 9 18" /></svg>'],
+      navText: [
+        '<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="15 6 9 12 15 18" /></svg>',
+        '<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="9 6 15 12 9 18" /></svg>',
+      ],
       margin: 0,
     });
   },
@@ -76,15 +77,15 @@ const owlCarousel = {
       responsive: {
         0: {
           items: 2,
-          slideBy: 1
+          slideBy: 1,
         },
         768: {
           items: 4,
-          slideBy: 1
+          slideBy: 1,
         },
         991: {
           items: 6,
-          slideBy: 1
+          slideBy: 1,
         },
       },
       loop: true,
@@ -95,7 +96,10 @@ const owlCarousel = {
       lazyLoad: true,
       dots: false,
       nav: true,
-      navText: ['<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="15 6 9 12 15 18" /></svg>', '<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="9 6 15 12 9 18" /></svg>'],
+      navText: [
+        '<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="15 6 9 12 15 18" /></svg>',
+        '<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="9 6 15 12 9 18" /></svg>',
+      ],
       margin: 10,
     });
   },
@@ -104,15 +108,15 @@ const owlCarousel = {
       responsive: {
         0: {
           items: 1,
-          slideBy: 1
+          slideBy: 1,
         },
         768: {
           items: 2,
-          slideBy: 1
+          slideBy: 1,
         },
         991: {
           items: 3,
-          slideBy: 1
+          slideBy: 1,
         },
       },
       loop: true,
@@ -123,31 +127,34 @@ const owlCarousel = {
       lazyLoad: true,
       dots: false,
       nav: true,
-      navText: ['<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="15 6 9 12 15 18" /></svg>', '<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="9 6 15 12 9 18" /></svg>'],
+      navText: [
+        '<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="15 6 9 12 15 18" /></svg>',
+        '<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="9 6 15 12 9 18" /></svg>',
+      ],
       margin: 10,
     });
   },
   setupProductsCarousel: function () {
-    const productCarousel = document.querySelectorAll('.product-carousel')
+    const productCarousel = document.querySelectorAll(".product-carousel");
 
     productCarousel.forEach((item) => {
       const $owl = $(item).owlCarousel({
         responsive: {
           0: {
             items: 1,
-            slideBy: 1
+            slideBy: 1,
           },
           575: {
             items: 2,
-            slideBy: 1
+            slideBy: 1,
           },
           768: {
             items: 3,
-            slideBy: 1
+            slideBy: 1,
           },
           991: {
             items: 4,
-            slideBy: 1
+            slideBy: 1,
           },
         },
         loop: true,
@@ -158,10 +165,13 @@ const owlCarousel = {
         lazyLoad: true,
         dots: false,
         nav: true,
-        navText: ['<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="15 6 9 12 15 18" /></svg>', '<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="9 6 15 12 9 18" /></svg>'],
+        navText: [
+          '<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="15 6 9 12 15 18" /></svg>',
+          '<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="9 6 15 12 9 18" /></svg>',
+        ],
         margin: 10,
       });
-    })
+    });
   },
   // setupTeamCarousel: function () {
   //   const $owl = $("#top-bar-carousel").owlCarousel({
@@ -183,155 +193,136 @@ const owlCarousel = {
   //     margin: 20,
   //   });
   // },
-}
+};
 
 const productsPreviewColors = {
-  init: function() {
-    this.config()
+  init: function () {
+    this.config();
   },
-  config: function() {
-    const products = document.querySelectorAll('.ProductBox')
+  config: function () {
+    const products = document.querySelectorAll(".ProductBox");
 
     products.forEach((item) => {
-      const mainImage = item.querySelector('.ProductBox-image-main')
-      const listImage = item.querySelectorAll('.ProductBox-colors-item')
+      const mainImage = item.querySelector(".ProductBox-image-main");
+      const listImage = item.querySelectorAll(".ProductBox-colors-item");
 
-      listImage.forEach((image) => image.addEventListener('mousemove', () => {
-        listImage.forEach((i) => i.classList.remove('active'))
-        image.classList.add('active')
-        const source = image.querySelector('img')
-        mainImage.src = source.src
-      }))
+      listImage.forEach((image) =>
+        image.addEventListener("mousemove", () => {
+          listImage.forEach((i) => i.classList.remove("active"));
+          image.classList.add("active");
+          const source = image.querySelector("img");
+          mainImage.src = source.src;
+        })
+      );
 
-      listImage?.[0]?.classList?.add('active')
-    })
+      listImage?.[0]?.classList?.add("active");
+    });
   },
-}
+};
 
 const header = {
   init: function () {
-    this.scrollTop()
-    this.menuEffect()
-    this.menuMobile()
+    this.scrollTop();
+    this.menuEffect();
+    this.menuMobile();
   },
-  menuMobile: function() {
-    const btnMenu = document.querySelector('.Navigation-btn-menu')
-    const mainMenu = document.querySelector('.Navigation-wrapper')
-    const overlay = document.querySelector('.Navigation-wrapper-overlay')
+  menuMobile: function () {
+    const btnMenu = document.querySelector(".Navigation-btn-menu");
+    const mainMenu = document.querySelector(".Navigation-wrapper");
+    const overlay = document.querySelector(".Navigation-wrapper-overlay");
 
-    btnMenu.addEventListener('click', () => {
-      mainMenu.classList.add('active')
-    })
+    btnMenu.addEventListener("click", () => {
+      mainMenu.classList.add("active");
+    });
 
-    overlay.addEventListener('click', () => {
-      mainMenu.classList.remove('active')
-    })
+    overlay.addEventListener("click", () => {
+      mainMenu.classList.remove("active");
+    });
   },
-  menuEffect: function() {
-    window.addEventListener('resize', (e) => {
-      const isMobile = e.target.outerWidth <= 991
+  menuEffect: function () {
+    const menuItems = document.querySelectorAll(".Navigation-menu-item-link");
 
-      if (isMobile) {
-        addEffectMobile()
-      } else {
-        addEffectDesktop()
-      }
-    })
-
-    const addEffectDesktop = () => {
-      const menuItems = document.querySelectorAll('.Navigation-menu-item')
-
-      menuItems.forEach((item) => item.addEventListener('mousemove', () => {
-        const subMenu = item.querySelector('.Navigation-menu-item-submenu')
-        subMenu?.classList?.add('active')
-      }))
-
-      menuItems.forEach((item) => item.addEventListener('mouseout', () => {
-        const subMenu = item.querySelector('.Navigation-menu-item-submenu')
-        subMenu?.classList?.remove('active')
-      }))
-    }
-
-    const addEffectMobile = () => {
-      const menuItems = document.querySelectorAll('.Navigation-menu-item')
-
-      menuItems.forEach((item) => item.addEventListener('click', (e) => {
-        const subMenu = item.querySelector('.Navigation-menu-item-submenu')
+    menuItems.forEach((item) =>
+      item.addEventListener("click", (e) => {
+        const subMenu = item.parentNode.querySelector(".Navigation-menu-item-submenu");
 
         if (subMenu) {
-          e.preventDefault()
-          subMenu?.classList?.add('active')
+          e.preventDefault();
+          subMenu?.classList?.toggle("active");
         } else {
-          const link = item.querySelector('.Navigation-menu-item-link').href
-          window.location.href = link
+          window.location.href = item.href;
         }
-      }))
-    }
-
-    if (window.innerWidth <= 991) {
-      addEffectMobile()
-    } else {
-      addEffectDesktop()
-    }
+      })
+    );
   },
   scrollTop: function () {
-    const scroll = document.querySelector('.Scroll')
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 150) scroll?.classList?.add('active')
-      else scroll?.classList?.remove('active')
-    })
+    const scroll = document.querySelector(".Scroll");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 150) scroll?.classList?.add("active");
+      else scroll?.classList?.remove("active");
+    });
   },
-}
+};
 
 const countUpConfig = {
   init: function () {
     // this.configCountUpWelcomeSection()
   },
   configCountUpWelcomeSection: function () {
-    const dataCountWelcomeSection = [{
-        targetHTML: '#countUp-long-term',
+    const dataCountWelcomeSection = [
+      {
+        targetHTML: "#countUp-long-term",
         numberCountUp: 92,
-        suffix: '%',
+        suffix: "%",
       },
       {
-        targetHTML: '#countUp-offices-internationally',
-        numberCountUp: 60
+        targetHTML: "#countUp-offices-internationally",
+        numberCountUp: 60,
       },
       {
-        targetHTML: '#countUp-years-in-viet-nam ',
-        numberCountUp: 7
+        targetHTML: "#countUp-years-in-viet-nam ",
+        numberCountUp: 7,
       },
-    ]
-    this.setupScrollEvent('.section-welcome .about-wrapper', dataCountWelcomeSection)
+    ];
+    this.setupScrollEvent(
+      ".section-welcome .about-wrapper",
+      dataCountWelcomeSection
+    );
   },
   setupScrollEvent: function (targetHTML, elementsCountUp) {
-    const target = document.querySelector(targetHTML)
+    const target = document.querySelector(targetHTML);
     if (target) {
       const options = {
         threshold: 1,
         rootMargin: "0px",
       };
       const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
           if (!entry.isIntersecting) {
             return;
           } else {
-            elementsCountUp.forEach((item) => this.setupCountUp(item.targetHTML, item.numberCountUp, item.suffix))
+            elementsCountUp.forEach((item) =>
+              this.setupCountUp(
+                item.targetHTML,
+                item.numberCountUp,
+                item.suffix
+              )
+            );
             observer.unobserve(entry.target);
           }
-        })
+        });
       }, options);
       observer.observe(target);
     }
   },
-  setupCountUp(targetId, number, suffix = '') {
+  setupCountUp(targetId, number, suffix = "") {
     const options = {
       startVal: 0,
       duration: 5,
       suffix,
-    }
-    const target = document.querySelector(targetId)
-    const countUpObj = new CountUp(target, number, options)
-    countUpObj.start()
-  }
-}
+    };
+    const target = document.querySelector(targetId);
+    const countUpObj = new CountUp(target, number, options);
+    countUpObj.start();
+  },
+};
